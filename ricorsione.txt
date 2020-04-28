@@ -1,0 +1,37 @@
+Problema:
+	dati in input:
+		-Stringa da riconoscere 'parola'
+		-Contenuto della Board
+		-posizione della lettera iniziale-->vado a cercare se la prima lettera 
+											della parola che voglio trovare è 
+											presente all'interno della matrice
+
+Soluzione parziale:(da cosa è composta)
+	-parte iniziale,già riconosciuta, di una parola
+	-elenco delle posizioni in cui si trovano le lettere già riconosciute
+
+Soluzione totale:
+	-parola completamente riconosciuta
+	-elenco di posizioni che servono per comporre la parola completa
+	
+Livello:(cos'è?)
+	-numero di caratteri già riconosciuti
+	
+Condizione di terminazione:
+	-livello==lunghezza della parola che cerco
+	-se viene trovata soluzione si interrompe subito la ricerca
+	
+Generazione delle soluzioni:
+	-Trovare tutte le posizioni che siano:
+		-adiacenti all'ultima posizione usata
+		-contenenti la lettera 'corretta'
+		-non ancora utilizzate
+		
+Avvio della ricorsione:
+	Livello=1 perchè la ricorsione parte da una posizione predefinita, 
+	quella chc contiene la prima lettera di una parola
+
+Strutture dati:
+	-Stringa da riconoscere 'parola'
+	-livello
+	-List<Pos> percorso--> corrispondente alla sequenza di caselle che ad ogni livello seleziono
